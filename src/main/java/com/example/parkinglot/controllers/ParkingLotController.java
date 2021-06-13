@@ -24,7 +24,6 @@ public class ParkingLotController {
     @PutMapping(value = "/vehicle/park")
     public ResponseEntity<?> park (@RequestBody Vehicle vehicle) {
         try {
-            System.out.println("check this method");
             return new ResponseEntity<>(parkingLotManager.park(vehicle), HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.EXPECTATION_FAILED);
@@ -70,5 +69,3 @@ public class ParkingLotController {
     }
 
 }
-//02222019230000
-//MMddyyyyhhmmss

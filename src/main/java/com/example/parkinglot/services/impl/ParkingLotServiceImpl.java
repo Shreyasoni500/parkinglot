@@ -29,8 +29,6 @@ public class ParkingLotServiceImpl implements ParkingLotService {
 
     @Override
     public Spot park(Vehicle vehicle) {
-
-        System.out.println("Inside park method");
         if (StringUtils.isEmpty(vehicle.getRegNo())) {
             throw new RuntimeException("Empty Reg No");
         }
